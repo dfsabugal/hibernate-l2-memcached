@@ -35,7 +35,7 @@ public class NonStrictReadWriteMemcachedCollectionRegionAccessStrategy
 
     @Override
     public Object get(SharedSessionContractImplementor session, Object key, long txTimestamp) throws CacheException {
-        return null;
+        return region.getCache().get(key);
     }
 
     @Override
